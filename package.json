@@ -1,0 +1,23 @@
+{
+  "name": "gfialauth",
+  "version": "1.0.0",
+  "description": "GFIAL",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Aditya",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "firebase": "^7.16.1",
+    "firebase-admin": "^9.0.0",
+    "firebase-tools": "^8.6.0",
+    "firebaseui": "^4.6.0",
+    "nodemon": "^2.0.4"
+  }
+}

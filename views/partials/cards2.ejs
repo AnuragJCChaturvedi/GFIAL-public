@@ -1,0 +1,139 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators" style="margin-bottom: 0px;">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="margin: 5px;"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1" style="margin: 5px;"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2" style="margin: 5px;"></li>
+    </ol>
+    <div class="carousel-inner">
+
+
+
+      <!-- Frame of first three cards -->
+      <div class="carousel-item active">
+          <ul class="cards">
+            <% projects.forEach(function(project) { %>
+                
+              <script></script>
+
+              <li class="cards_item" id="<%= project.id %>">
+                <div class="card">
+                  <div class="card_image"><img src="<%= project.img %>"></div>
+                  <div class="card_content">
+                    <h2 class="card_title"><%= project.name %></h2>
+                    <p class="card_text">Description of Project:
+                    <span><%= project.description %> </span>
+                    <div class="card-budget"><i></i><b>Budget :- </b>Rs. <%= project.budget %></div>
+                    <div class="card-expect"><i></i><b>Expected By :- </b><%= project.date %></div>
+                    <div class="card-skill"><i></i><b>Skill :- </b><%= project.skill %></div>
+                    <div class="card-proposal"><i></i><b>Proposals :- </b><%= project.proposals %></div>
+                    </p>
+                  <button class="btn card_btn" onclick= "dataModel(this)" data-pid="<%= project.id %>" style="width:50%;display: block; margin: auto; border: 1px solid grey;">Read More</button>
+                  </div>
+                </div>
+              </li>
+              
+            <% }); %>
+          </ul>
+      </div>
+
+      <!-- Frame of next three cards -->
+      <div class="carousel-item ">
+          <ul class="cards">
+
+
+            <% projects.forEach(function(project) { %>
+                
+                <li class="cards_item" id="<%= project.id %>" >
+                  <div class="card">
+                    <div class="card_image"><img src="<%= project.img %>"></div>
+                    <div class="card_content">
+                      <h2 class="card_title"><%= project.name %></h2>
+                      <p class="card_text">Description of Project:
+                      <span><%= project.description %> </span>
+                      <div class="card-budget"><i></i><b>Budget :- </b>Rs. <%= project.budget %></div>
+                      <div class="card-expect"><i></i><b>Expected By :- </b><%= project.date %></div>
+                      <div class="card-skill"><i></i><b>Skill :- </b><%= project.skill %></div>
+                      <div class="card-proposal"><i></i><b>Proposals :- </b><%= project.proposals %></div>
+                      </p>
+                      <button class="btn card_btn" onclick= "dataModel(this)" data-pid="<%= project.id %>" style="width:50%;display: block; margin: auto; border: 1px solid grey;">Read More</button>
+                    </div>
+                  </div>
+                </li>
+                
+            <% }); %>
+
+
+          </ul>
+      </div>
+
+      <!-- Frame of last three cards -->
+      <div class="carousel-item ">
+        <ul class="cards">
+            <% projects.forEach(function(project) { %>
+                
+                <li class="cards_item" >
+                  <div class="card">
+                    <div class="card_image"><img src="<%= project.img %>"></div>
+                    <div class="card_content">
+                      <h2 class="card_title"><%= project.name %></h2>
+                      <p class="card_text">Description of Project:
+                      <span><%= project.description %> </span>
+                      <div class="card-budget"><i></i><b>Budget :- </b>Rs. <%= project.budget %></div>
+                      <div class="card-expect"><i></i><b>Expected By :- </b><%= project.date %></div>
+                      <div class="card-skill"><i></i><b>Skill :- </b><%= project.skill %></div>
+                      <div class="card-proposal"><i></i><b>Proposals :- </b><%= project.proposals %></div>
+                      </p>
+                      <button class="btn card_btn" onclick="dataModel(this)" data-pid="<%= project.id %>" style="width:50%;display: block; margin: auto; border: 1px solid grey;">Read More</button>
+                    </div>
+                  </div>
+                </li>
+                
+            <% }); %>
+          </ul>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="width: 7%;">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="width: 7%;">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<script>
+
+function dataModel(pr) {
+
+  // var data = { ...project};
+
+  console.log(pr);
+  
+  // console.log(typeof(cproject));
+  // console.log(cproject);
+  // console.log(Array.isArray(cproject));
+  console.log(pr.getAttribute("data-pid"));
+
+  let pid = pr.getAttribute("data-pid");
+
+  let pobj = jarray.find(x => x.id == pid);
+  if(pobj) {
+
+    document.getElementById('modal-name').innerHTML = pobj.name;
+    document.getElementById('modal-desc').innerHTML = pobj.description;
+    document.getElementById('modal-skill').innerHTML = "<b>Skill :- </b>"+pobj.skill;
+    document.getElementById('modal-proposal').innerHTML = "<b>Proposals :- </b>"+pobj.proposals;
+    document.getElementById('modal-budget').innerHTML = "<b>Budget:- </b>"+ "Rs. " +pobj.budget;
+    document.getElementById('modal-expect').innerHTML = "<b>Expected By :- </b>"+pobj.date;
+  }
+  else {
+    console.log("Card-Error");
+  }
+
+  document.getElementById('id01').style.display='block';
+
+}; 
+
+</script>
+
