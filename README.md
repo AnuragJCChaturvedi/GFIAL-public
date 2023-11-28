@@ -1,4 +1,4 @@
-# GFIAL Application Documentation
+# GFIAL
 
 ## Overview
 
