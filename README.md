@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# GFIAL-public
-=======
 # GFIAL
 
 ## Overview
@@ -28,5 +25,3 @@ GFIAL is a Node.js and Express web application designed to serve as a platform c
 - **JWT (JSON Web Tokens):** A standard for securely transmitting information between parties.
 
 - **EJS:** A view engine for server-side rendering.
-
->>>>>>> techL
