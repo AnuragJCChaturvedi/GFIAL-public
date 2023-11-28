@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+    <title>GFIAL | Dashboard</title>
+
+    <%- include ("../partials/head") %>
+
+</head>
+
+<body class="animsition">
+    <script> 
+    cproject = ejs.render('<%- JSON.stringify(projects) %>');
+    var jarray = JSON.parse(cproject);
+    </script>
+
+    <div class="page-wrapper">
+
+        
+        <%- include ("../partials/sidebar") %>
+        
+        
+        
+        <div class="page-container">
+
+            <!-- ------------------------------------ Top Navbar starts here ---------------------------->
+
+            <%- include ("../partials/top_navbar") %>
+            
+            <!-- ------------------------------------ Top Navbar ends here ---------------------------->
+
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Dashboard</h2>
+                                    <button class="au-btn au-btn-icon au-btn--blue">
+                                        <i class="zmdi zmdi-plus"></i> Compose POC</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-t-25">
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="overview-item overview-item--c1" style="padding-top: 15px; padding-bottom: 15px;">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon" style="margin-top: 15px;">
+                                                <i class="zmdi zmdi-folder-star-alt"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>POC</h2>
+                                                <span><b>Proof of Concept</b></span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="overview-item overview-item--c2" style="padding-top: 15px; padding-bottom: 15px;">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon" style="margin-top: 15px;">
+                                                <i class="zmdi zmdi-accounts-alt"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2> Projects</h2>
+                                                <span><b>By mentors</b></span>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <div class="overview-item overview-item--c3" style="padding-top: 15px; padding-bottom: 15px;">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon" style="margin-top: 15px;">
+                                                <i class="zmdi zmdi-city-alt"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>Industry</h2>
+                                                <span><b>Industrial Projects</b></span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!----------------------------------------- Cards go here ------------------------>
+
+                        <%- include ("../partials/cards2") %>
+
+
+                        <!-------------------------------- New set of cards ------------------------------------>
+
+
+                        <!------------------------------ Modals ------------------------------>
+
+                        <%- include ("../partials/modal") %>
+                        
+
+
+                <!------------------------------------------- Footer ------------------------------>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2018 GFIAL. All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                <!-- ----------------------------------- Footer Ends ------------------------------->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include ("../partials/foot") %>
+
+
+</body>
+
+</html>

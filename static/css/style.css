@@ -1,0 +1,146 @@
+
+body {
+  font-size: 16px;
+  box-sizing: border-box;
+/*  background-image: url("../images/bridge.jpg");
+*/}
+
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+
+
+}
+
+.home-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+.home-footer a {
+  color: white;
+}
+ol,ul {
+  margin-top: 0px;
+}
+.footer-links {
+  margin-top: 10px;
+
+}
+
+.footer-links span {
+  height: 30px;
+  padding:10px;
+  align-items: center;
+}
+
+.main-content {
+  height: auto;
+  /*background-image: url("../images/bridge.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;*/
+}
+
+.content {
+  background-image: url("../images/bridge.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+
+.gfial-logo1 img {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 120px;
+  height: auto;
+  margin-top: 40px;
+
+}
+
+.gfial-logo2 img{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 160px;
+  height: auto;
+  padding-left: 5px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+
+}
+
+.content-links {
+  text-align: center;
+}
+
+.content-links img {
+  width:100px;
+  height: 100px;
+
+}
+.content-links div {
+  display: inline-block;
+  margin: 40px;
+
+}
+.content-links p {
+  font-size: 19px;
+  margin-top:10px ;
+  font-style: italic;
+  text-align: center;
+
+}
+/* ---------- about part ---------------------------*/
+.about {
+   font-family: 'Charm', cursive;
+   padding: 40px;
+   font-weight: 900;
+   font-size: 20px;
+   margin-bottom: 40px;
+/*     display: flex;
+*/   justify-content: center;
+
+
+}
+/*.background-image {
+  background-image: url("../images/bridge2.jpg");
+background-size: 100% 100%;
+
+filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+}*/
+
+.about h2 {
+    text-align: center;
+}
+
+#logo-about img{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 160px;
+  height: auto;
+  padding-left: 5px;
+
+  margin-top: 60px;
+  margin-bottom: -40px;
+
+}
+
+.about p {
+  color: black;
+  padding: 10px;
+} 
